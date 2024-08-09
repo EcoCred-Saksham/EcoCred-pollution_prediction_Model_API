@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from joblib import load
 import numpy as np
 from datetime import datetime
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def receive_wallet_address():
     data = request.get_json()
